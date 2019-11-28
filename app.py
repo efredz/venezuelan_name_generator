@@ -29,7 +29,11 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         print(generate_venezuelan_name())
     elif len(sys.argv) == 3:
-        print(generate_venezuelan_name_with_base(sys.argv[1], sys.argv[2]))
+        first_one = randrange(2) == 0
+        if first_one:
+            print(generate_venezuelan_name_with_base(sys.argv[1], sys.argv[2]))
+        else:
+            print(generate_venezuelan_name_with_base(sys.argv[2], sys.argv[1]))
         
         
     
