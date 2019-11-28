@@ -26,7 +26,7 @@ def generate_venezuelan_name_with_base(first, second):
     return (random_splitted + random_splitted_2).title()
 
 if __name__ == "__main__":
-    if len(sys.argv) == 0:
+    if len(sys.argv) == 1:
         print(generate_venezuelan_name())
     elif len(sys.argv) == 3:
         print(generate_venezuelan_name_with_base(sys.argv[1], sys.argv[2]))
