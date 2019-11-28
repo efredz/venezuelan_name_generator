@@ -1,4 +1,5 @@
 from random import randrange
+import sys
 
 def read_file(filepath):
     with open(filepath) as f:
@@ -19,8 +20,17 @@ def generate_venezuelan_name():
     random_splitted_2 = split_in_half(pick_random(names))
     return (random_splitted + random_splitted_2).title()
 
-print(generate_venezuelan_name())
+def generate_venezuelan_name_with_base(first, second):
+    random_splitted = split_in_half(first)
+    random_splitted_2 = split_in_half(second)
+    return (random_splitted + random_splitted_2).title()
 
-
-
+if __name__ == "__main__":
+    if len(sys.argv) == 0:
+        print(generate_venezuelan_name())
+    elif len(sys.argv) == 3:
+        print(generate_venezuelan_name_with_base(sys.argv[1], sys.argv[2]))
+        
+        
+    
 
